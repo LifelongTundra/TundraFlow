@@ -11,3 +11,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 The main graph library is [Drawflow](https://github.com/jerosoler/Drawflow)
 The base angular example for this library that I used as a starting point is [drawflowangular](https://github.com/lucasguarasp/drawflowangular)
+
+## Goal
+
+The goal of this pet project is to develop a sort of workflow graph structure with as few libraries as possible.
+Right now primary focus is on finding ways to extend the connection type so that it can have metadata.
