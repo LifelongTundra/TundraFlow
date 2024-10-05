@@ -1,0 +1,46 @@
+
+<body>
+  <header>
+    <h2>Workflow</h2>
+  </header>
+  <div class="wrapper">
+
+    <div class="col">
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="startNode">
+        <i class="fa fa-play"></i><span> Start Node</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="endNode">
+        <i class="fa fa-stop"></i><span> End Node</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="decisionNode">
+        <i class="fas fa-code"></i><span> Decision Node</span>
+      </div>
+      <div class="drag-drawflow" draggable="true" (dragstart)="drag($event)" data-node="multiNode">
+        <i class="fas fa-code-branch"></i><span> Multiple inputs/outputs</span>
+      </div>
+    </div>
+
+    <div class="col-right">
+      <div class="menu">
+        <ul>
+          <li onclick="editor.changeModule('Home'); changeModule(event);" class="selected">Sandbox</li>
+        </ul>
+      </div>
+      <div id="drawflow" (drop)="drop($event)" (dragover)="allowDrop($event)">
+
+        <div class="btn-export" (click)="export()">Export</div>
+        <div class="btn-clear" (click)="onClear()">Clear</div>
+        <div class="btn-lock">
+          <i id="lock" class="fas fa-lock" onclick="editor.editor_mode='fixed'; changeMode('lock');"></i>
+          <i id="unlock" class="fas fa-lock-open" onclick="editor.editor_mode='edit'; changeMode('unlock');"
+            style="display:none;"></i>
+        </div>
+        <div class="bar-zoom">
+          <i class="fas fa-search-minus" (click)="onZoomOut()"></i>
+          <i class="fas fa-search" (click)="onZoomReset()"></i>
+          <i class="fas fa-search-plus" (click)="onZoomIn()"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
