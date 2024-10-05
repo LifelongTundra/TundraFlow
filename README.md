@@ -1,3 +1,4 @@
+[![GitHub license](https://img.shields.io/github/license/LifelongTundra/TundraFlow)](https://github.com/LifelongTundra/TundraFlow/blob/master/LISCENSE)
 # TundraFlow
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.6.
